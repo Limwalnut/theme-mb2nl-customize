@@ -1,0 +1,53 @@
+
+#main-content .gradeparent  {
+
+    .floating {
+        z-index: 2;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .sticky-nav1 &,
+    .sticky-nav2 &,
+    .sticky-nav3 &,
+    .sticky-nav4 & {
+        .floating {
+            z-index: 5;
+        }
+    }
+
+}
+
+
+.path-grade-report-grader {
+    .gradeparent {
+        tr {
+            &.heading {
+                top: $logohsm + 15px;
+            }
+        }
+    }
+}
+
+
+.path-mod-assign {
+    .gradingtable {
+        thead {
+            tr {
+                top: $logohsm + 15px;
+            }
+        }
+    }
+
+   .fsmod-wrap {
+        .gradingtable {
+            thead {
+                tr {
+                    top: 0;
+                }
+            }
+        }
+    }
+}

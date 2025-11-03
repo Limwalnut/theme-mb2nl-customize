@@ -1,0 +1,214 @@
+
+#course-panel {
+
+    .container-fluid {
+        max-width: 100%;
+
+        .row > div {
+            margin-bottom: 20px;
+        }
+    }
+
+    .teacher-panel {
+        padding: 2rem 0;
+    }
+
+
+
+
+    .teacher-panel {
+        .box {
+            border-radius: var(--mb2-boxradius);
+            border: solid 1px $color_box_border;
+            background-color: $color_box_bg;
+            margin: 0 0 20px 0;
+
+            > h3 {
+                background-color: $color_gray2;
+                font-size: $fsgeneral;
+                margin: 0;
+                border-bottom: solid 1px $color_box_border;
+                padding: .55rem 1rem;
+                border-radius: var(--mb2-boxradius) var(--mb2-boxradius) 0 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                i {
+                    margin-right: 7px;
+                    color: $accent1;
+                    display: none;
+                }
+            }
+
+
+            /* Custom colors */
+
+            &.box-qbank,
+            &.box-contacts,
+            &.box-modulenav {
+                > h3 {
+                    i {
+                        color: $color_info;
+                    }
+                }
+            }
+
+
+            &.box-badges,
+            &.box-badges2 {
+                > h3 {
+                    i {
+                        color: $color_warning;
+                    }
+                }
+            }
+
+
+            &.box-students,
+            &.box-students2 {
+                > h3 {
+                    i {
+                        color: $color_success;
+                    }
+                }
+            }
+
+
+            /* Special style fo moduele navigation block */
+
+            &.box-modulenav {
+                border-width: 2px;
+                border-color: $color_info;
+            }
+
+        }
+    }
+
+
+
+    .student-panel-a {
+        .box {
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    .boxlist {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            list-style: none;
+            padding: 0 0 .25rem .6rem;
+            background-color: rgba(0,0,0,.035);
+            position: relative;
+            top: -1px;
+            border-top: solid 1px $color_box_border;
+        }
+
+        > li {
+            margin: 0;
+            padding: 0;
+
+
+            a {
+                display: block;
+                color: $textcolor;
+
+                &:hover,
+                &:focus {
+                    color: $linkcolor;
+                }
+            }
+
+            > span {
+                display: block;
+            }
+
+            > a,
+            > span {
+                padding: .3rem 1rem;
+                border-bottom: solid 1px $color_box_border;
+
+                > img {
+                    margin-right: .85rem;
+                    width: 1.18rem;
+                    height: 1.18rem;
+                }
+            }
+
+            > a {
+                &:hover,
+                &:focus {
+                    background-color: darken($color_box_bg, 3%);
+                }
+                position: relative;
+            }
+
+            &:last-child {
+                > a {
+                    border: 0;
+                    border-radius: 0 0 var(--mb2-boxradius) var(--mb2-boxradius);
+                }
+            }
+
+
+            > span {
+                position: relative;
+                outline: none;
+
+                &.nolink-item {
+                    background-color: rgba(0,0,0,.04);
+                    font-weight: bold;
+                }
+            }
+
+
+            ul {
+                display: none;
+
+                li > a,
+                li > span {
+                    padding: .35rem .6rem;
+                    display: block;
+                }
+
+                li > span {
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+
+
+    .boxlist-toggle {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        text-align: center;
+        right: .4rem;
+        font-size: 1.3rem;
+        top: 50%;
+        margin-top: -18px;
+        color: $textcolor_lighten;
+
+        &:before {
+            @include mb2_font_fa();
+            content: '\f107';
+        }
+
+        &.active {
+            &:before {
+                content: '\f106';
+            }
+        }
+    }
+
+}
