@@ -45,6 +45,7 @@ All notable changes to this project will be documented in this section.
 ## [1.0.1] - 2025-11-03
 ### Added
 - Added **Guest Login** button on the login page.
+- Added **Guest Login** string in **theme_mb2nl.php**
 
 ### Changed
 - Removed **continuewith** text on the SSO login button 

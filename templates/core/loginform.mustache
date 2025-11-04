@@ -131,7 +131,7 @@
         {{/hasidentityproviders}}
         {{! Gust login button to reveal the login form }}
         <div class="login-form-toggle">
-            <button id="showLoginForm" class="btn mb2-pb-btn btn-primary">Guest Login</button>
+            <button id="showLoginForm" class="btn mb2-pb-btn btn-primary">{{#str}} guestlogin, theme_mb2nl {{/str}}</button>
         </div>
         <div class="login-form-wrap" style="display: none;">
             <form class="login-form" action="{{loginurl}}" method="post" id="login">
