@@ -108,6 +108,28 @@
         {{#cansignup}}
             <a href="{{signupurl}}" class="sr-only">{{#str}} tocreatenewaccount {{/str}}</a>
         {{/cansignup}}
+        {{#hasidentityproviders}}
+            <div class="login-identityproviders">
+                <h2 class="login-heading sr-only">{{#str}} potentialidps, auth {{/str}}</h2>
+                {{#identityproviders}}
+                    <div class="potentialidp">
+                    <a class="btn btn-socimage btn-{{name}}" href="{{url}}" title="{{name}}">
+                        {{#iconurl}}
+                            <span class="btn-image" aria-hidden="true">
+                                <img src="{{iconurl}}" alt="">
+                            </span>
+                        {{/iconurl}}
+                        <span class="btn-text">
+                            {{! {{#str}} continuewith, theme_mb2nl, {{name}} {{/str}} }}
+                            {{#str}} {{name}} {{/str}}
+                        </span>
+                    </a>
+                </div>
+                {{/identityproviders}}
+            </div>
+            <div class="text-separator"><div><span>{{#str}}or, availability{{/str}}</span></div></div>
+        {{/hasidentityproviders}}
+        {{! Gust login button to reveal the login form }}
         <div class="login-form-toggle">
             <button id="showLoginForm" class="btn mb2-pb-btn btn-primary">Guest Login</button>
         </div>
@@ -143,27 +165,6 @@
                 </div>
             </form>
         </div>
-        {{#hasidentityproviders}}
-            <div class="text-separator"><div><span>{{#str}}or, availability{{/str}}</span></div></div>
-            <div class="login-identityproviders">
-                <h2 class="login-heading sr-only">{{#str}} potentialidps, auth {{/str}}</h2>
-                {{#identityproviders}}
-                    <div class="potentialidp">
-                    <a class="btn btn-socimage btn-{{name}}" href="{{url}}" title="{{name}}">
-                        {{#iconurl}}
-                            <span class="btn-image" aria-hidden="true">
-                                <img src="{{iconurl}}" alt="">
-                            </span>
-                        {{/iconurl}}
-                        <span class="btn-text">
-                            {{#str}} continuewith, theme_mb2nl, {{name}} {{/str}}
-                        </span>
-                    </a>
-                </div>
-                {{/identityproviders}}
-            </div>
-        {{/hasidentityproviders}}
-
         {{#canloginasguest}}
             <div class="guest-login-form mb-2">
                 <div class="mb-2">{{#str}}someallowguest{{/str}}</div>
@@ -217,7 +218,7 @@
     {{/error}}
 {{/js}}
 
-
+{{! Click to display Guest login form }}
 <script>
     document.getElementById('showLoginForm').addEventListener('click', function() {
         document.querySelector('.login-form-wrap').style.display = 'block';
