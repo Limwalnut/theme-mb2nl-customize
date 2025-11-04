@@ -10,7 +10,7 @@ This project customizes the **New Learning** theme for IMC’s Moodle platform, 
    - Zip the entire project folder into a `.zip` file (e.g., `theme_mb2nl.zip`).  
    - **Important:** When uploading to Production, run:
      ```bash
-     zip -r mb2nl.zip mb2nl -x "mb2nl/.git/*"
+     zip -r mb2nl.zip mb2nl -x "theme_mb2nl_customize/.git/*"
      ```
      to exclude `.git` files, which are not accepted on the Production site.
 
