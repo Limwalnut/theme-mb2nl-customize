@@ -10,7 +10,7 @@ This project customizes the **New Learning** theme for IMC’s Moodle platform, 
    - Zip the entire project folder into a `.zip` file (e.g., `theme_mb2nl.zip`).  
    - **Important:** When uploading to Production, run:
      ```bash
-     zip -r mb2nl.zip mb2nl -x "theme_mb2nl_customize/.git/*"
+     zip -r mb2nl.zip theme-mb2nl-customize -x "theme_mb2nl_customize/.git/*"
      ```
      to exclude `.git` files, which are not accepted on the Production site.
 
@@ -20,7 +20,7 @@ This project customizes the **New Learning** theme for IMC’s Moodle platform, 
 3. **Install the plugin**
    - Navigate to:  
      `Site administration → Plugins → Install plugins`  
-   - Upload the zipped file (`theme_mb2nl.zip`).
+   - Upload the zipped file (`mb2nl.zip`).
 
 4. **Complete installation**
    - Follow the on-screen prompts to complete installation.  

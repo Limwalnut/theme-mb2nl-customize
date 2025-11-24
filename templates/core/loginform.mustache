@@ -218,9 +218,24 @@
 {{/js}}
 
 {{! Click to display Guest login form }}
-<script>
+{{! <script>
     document.getElementById('showLoginForm').addEventListener('click', function() {
         document.querySelector('.login-form-wrap').style.display = 'block';
         this.style.display = 'none';
     });
+</script> }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('showLoginForm');
+    var form = document.querySelector('.login-form-wrap');
+
+    if (!btn || !form) {
+        return; // 避免学生页面没有这个元素时报错
+    }
+
+    btn.addEventListener('click', function() {
+        form.style.display = 'block';
+        btn.style.display = 'none';
+    });
+});
 </script>
