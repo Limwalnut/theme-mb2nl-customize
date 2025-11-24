@@ -765,4 +765,4 @@ $string['xcolumns'] = '{$a} columns';
 $string['xmoreteachers'] = '+{$a->teachers}';
 $string['yes'] = 'Yes';
 $string['yourprogress'] = 'Your progress';
-$string['guestlogin'] = 'Guest Login';
+$string['guestlogin'] = 'Authorised Login';
